@@ -43,7 +43,8 @@
   gap: 1rem;
 }
 
-.menu-time h2:nth-child(2),
-.menu-score h2:nth-child(2) {
-  margin-top: 1rem;
+.menu-time-title, .menu-score-title {
+    color: #ff0000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
