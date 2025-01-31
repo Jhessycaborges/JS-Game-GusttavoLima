@@ -29,7 +29,7 @@ const state = {
   }
   
   function playSound(audioName) {
-    let audio = new Audio("../src/audios/" + audioName + ".mp3");
+    let audio = new Audio("src/audios/" + audioName + ".mp3");
     audio.volume = 0.2;
     audio.play();
   }
