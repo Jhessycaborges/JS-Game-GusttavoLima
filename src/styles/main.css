@@ -1,8 +1,4 @@
-@media (max-width: 760px) {
-  .container, .menu, .panel, .square, .enemy, .menu-lives, .menu-time-title, .menu-score-title {
-    width: 90%;
-  }
-}
+
 .container {
   display: flex;
   flex-direction: column;
