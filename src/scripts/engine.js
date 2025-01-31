@@ -6,13 +6,13 @@ const state = {
     score: document.querySelector("#score"),
   },
   values: {
-    gameVelocity: 500,
+    gameVelocity: 450,
     hitPosition: 0,
     result: 0,
     currentTime: 60,
   },
   actions: {
-    timerId: setInterval(randomSquare, 500),
+    timerId: setInterval(randomSquare, 450),
     countDownTimerId: setInterval(countDown, 1000),
   },
 };
