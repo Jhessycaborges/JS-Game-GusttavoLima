@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("images/FundoGL.JPEG");
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 90px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom: 5px solid #ffd700;
+}
+
+.panel {
+    margin-top: 1rem;
+    display: flex;
+    margin: 35px;
+    margin-left: 10%;
+}
+
+.square {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #000000;
+    background-color: rgb(238, 238, 238);
+}
+
+.enemy {
+    background-image: url("images/GusttavoLima.PNG");
+    background-size: cover;
+}
+
+.menu-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.menu-time-title, .menu-score-title {
+    color: #ff0000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
