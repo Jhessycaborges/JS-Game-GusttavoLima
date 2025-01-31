@@ -1,50 +1,121 @@
+/* Contêiner principal */
 .container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-image: url("../images/FundoGL.JPEG");
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../images/FundoGL.JPEG");
+    background-size: cover;
+    background-position: center center;
 }
 
+/* Menu superior */
 .menu {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  height: 90px;
-  width: 100%;
-  background-color: #ffffff;
-  color: #000000;
-  border-bottom: 5px solid #ffd700;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;  /* Reduzir o espaço no menu */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+    border-bottom: 5px solid rgb(255, 215, 0);
+    z-index: 1;
+    flex-wrap: wrap;  /* Permite que os itens se ajustem quando o espaço for pequeno */
 }
 
-.panel {
-  margin-top: 1rem;
-  display: flex;
-  margin: 35px;
-  margin-left: 10%;
-}
-
-.square {
-  height: 150px;
-  width: 150px;
-  border: 1px solid #eeeeee;
-  background-color: #000000;
-}
-
-.enemy {
-  background-image: url("../images/GusttavoLima.PNG");
-  background-size: cover;
-}
-
-.menu-lives {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+/* Score e Time */
+.menu-time, .menu-score {
+    text-align: center;
+    font-size: 1rem;  /* Reduzindo o tamanho da fonte */
+    margin: 0.2rem;  /* Reduzindo a margem */
 }
 
 .menu-time-title, .menu-score-title {
-    color: #ff0000;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    color: rgb(255, 0, 0);
+    margin-bottom: 0.5rem;
+}
+
+/* Panel de Jogo (tabuleiro) */
+.panel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Cria 3 colunas */
+    gap: 0;  /* Removendo o gap entre as células para ficarem coladas */
+    margin: 1rem;
+    padding: 0;  /* Removendo o padding do painel */
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Estilo das quadrículas */
+.square {
+    height: 8vw;  /* Usando unidades relativas */
+    width: 8vw;
+    border: 1px solid rgb(0, 0, 0);  /* Borda visível entre as células */
+    background-color: rgb(238, 238, 238);
+    position: relative;
+}
+
+.enemy {
+    background-image: url("../images/GusttavoLima.PNG");
+    background-size: cover;  /* Ajusta a imagem para caber na célula */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Menu de vidas */
+.menu-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .panel {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
+    }
+
+    .square {
+        height: 10vw;
+        width: 10vw;
+    }
+
+    .menu-time, .menu-score {
+        font-size: 1.5rem;
+    }
+
+    .menu-lives img {
+        height: 50px;
+    }
+}
+
+/* Para telas muito pequenas, como celulares em modo retrato */
+@media (max-width: 480px) {
+    .panel {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0.5rem;
+        max-width: 100%;
+    }
+
+    .square {
+        height: 20vw;  /* Aumentando o tamanho das células no celular */
+        width: 20vw;   /* Aumentando o tamanho das células no celular */
+    }
+
+    .menu-time, .menu-score {
+        font-size: 1rem;
+    }
+}
+
+/* Ajuste para celulares e tablets */
+@media (max-width: 768px) {
+    .container {
+        background-position: calc(100% - 10%) center;  /* Move a imagem ligeiramente para a esquerda */
+    }
 }
