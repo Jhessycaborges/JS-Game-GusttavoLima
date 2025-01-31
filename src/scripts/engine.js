@@ -6,13 +6,13 @@ const state = {
       score: document.querySelector("#score"),
     },
     values: {
-      gameVelocity: 500,
+      gameVelocity: 600,
       hitPosition: 0,
       result: 0,
       curretTime: 60,
     },
     actions: {
-      timerId: setInterval(randomSquare, 500),
+      timerId: setInterval(randomSquare, 600),
       countDownTimerId: setInterval(countDown, 1000),
     },
   };
@@ -29,7 +29,7 @@ const state = {
   }
   
   function playSound(audioName) {
-    let audio = new Audio("audios/" + audioName + ".mp3");
+    let audio = new Audio("./src/audios/" + audioName + ".mp3");
     audio.volume = 0.2;
     audio.play();
   }
