@@ -1,5 +1,5 @@
 @media (max-width: 760px) {
-  .container-media {
+  .container, .menu, .panel, .square, .enemy, .menu-lives, .menu-time-title, .menu-score-title {
     width: 90%;
   }
 }
